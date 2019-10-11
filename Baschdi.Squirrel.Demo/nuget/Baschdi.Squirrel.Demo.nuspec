@@ -1,0 +1,14 @@
+﻿<package >
+  <metadata>
+    <id>Baschdi.Squirrel.Demo</id>
+    <version>1.0.0</version>
+    <authors>Baschdi</authors>
+    <owners>Baschdi</owners>
+    <description>Baschdi.Squirrel.Demo</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright © 2019</copyright>
+  </metadata>
+  <files>
+    <file src="bin\Debug\*.*" target="lib\net472\" exclude="*.pdb;*.vshost.*"/>
+  </files>
+</package>
