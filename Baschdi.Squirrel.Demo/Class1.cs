@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using EvilBaschdi.Core;
+using NuGet;
 using Squirrel;
 
 namespace Baschdi.Squirrel.Demo
@@ -43,12 +44,16 @@ namespace Baschdi.Squirrel.Demo
   
 
         public async Task TaskRun()
-        {
+        {SemanticVersion newVersion = null;
             var update = _checkForUpdates.TaskValue().Result;
             
             if (update.ReleasesToApply.Any())
             {
+                newVersion = update.FutureReleaseEntry.Version;
+                
                 await _updateManager.UpdateApp();
+
+                
             }
         }
     }

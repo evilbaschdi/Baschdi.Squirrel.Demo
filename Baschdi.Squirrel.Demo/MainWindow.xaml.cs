@@ -28,7 +28,7 @@ namespace Baschdi.Squirrel.Demo
             ICheckForUpdates checkForUpdates = new CheckForUpdates(updateManager);
             IUpdate update = new Update(updateManager, checkForUpdates);
             await update.TaskRun();
-
+            //UpdateManager.RestartApp();
             updateManager.Dispose();
         }
     }
